@@ -1,0 +1,30 @@
+header {
+  background: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;;
+}
+.content {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: var(--dark)
+  }
+  p {
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    margin-bottom: 3em;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 1rem;
+  }
+}

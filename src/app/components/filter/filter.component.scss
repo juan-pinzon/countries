@@ -1,0 +1,33 @@
+.grid {
+  display: grid;
+  grid-template-columns: 400px 1fr 200px;
+  margin-bottom: 3em;
+}
+
+.search {
+	display: flex;
+	padding: 20px;
+	background: var(--white);
+	border-radius: 15px;
+
+	& > .clear-search {
+		cursor: pointer;
+	}
+
+	img {
+		max-width: 20px;
+	}
+	input {
+		width: 100%;
+		margin-left: 5px;
+		margin-right: 5px;
+		border: 1px solid transparent;
+		outline: none;
+		background: var(--white);
+		color: var(--back);
+
+		&::placeholder {
+			color: var(--black)
+		}
+	}
+}

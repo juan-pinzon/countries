@@ -1,0 +1,11 @@
+<main [class]="{'is-dark-mode': darkMode, 'is-light-mode': !darkMode}">
+  <app-header (toggleMode)="toggleMode($event)"></app-header>
+  <app-filter></app-filter>
+  <div class="wrapper">
+    <div class="country-container">
+      <ng-container *ngFor="let country of (countries$ | async)">
+        <app-country [country]="country" ></app-country>
+      </ng-container>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,22 @@
+<div class="wrapper">
+	<form [formGroup]="formFilter">
+		<div class="grid">
+			<div class="search">
+				<img src="https://www.flaticon.com/svg/static/icons/svg/622/622669.svg" alt="" />
+				<input type="text" name="search" id="search" placeholder="Search by name" formControlName="name" />
+				<img class="clear-search" src="https://www.flaticon.com/svg/static/icons/svg/748/748122.svg" alt="" *ngIf="formFilter.get('name').value" (click)="clearSearch()" />
+			</div>
+			<span></span>
+			<div>
+				<label for="region"></label>
+				<select name="region" id="region" formControlName="region">
+					<option value="all">All</option>
+					<ng-container *ngFor="let region of regions">
+						<option [value]="region">{{ region | titlecase }}</option>
+					</ng-container>
+				</select>
+			</div>
+		</div>
+	</form>
+
+</div>

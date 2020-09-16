@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --black: #111517;
+  --white: white;
+  --background: #fafafa;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  color: var(--black);
+  background: var(--background);
+  min-height: 100vh;
+}
+
+
+.is-dark-mode {
+  --black: white;
+  --white: #273542;
+  --background: #1a2833;
+}
+
+.is-light-mode {
+  --black: #111517;
+  --white: white;
+  --background: #fafafa;
+}
+
+.wrapper {
+  max-width: 1312px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --black: white;
+    --white: #273542;
+    --background: #1a2833;
+  }
+}
