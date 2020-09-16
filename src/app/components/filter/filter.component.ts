@@ -42,9 +42,7 @@ export class FilterComponent implements OnInit, OnDestroy {
 				if (value) {
 					this.formFilter.get('region').setValue('')
 					this.router.navigate([''], { queryParams: { name: value } })
-					return
 				}
-				this.formFilter.get('region').setValue('all')
 			}))
 
 		this.subscriptions.push(this.formFilter.get('region').valueChanges
@@ -59,6 +57,7 @@ export class FilterComponent implements OnInit, OnDestroy {
 
 	clearSearch(): void {
 		this.formFilter.get('name').setValue('')
+		this.formFilter.get('region').setValue('all')
 	}
 
 	ngOnDestroy(): void {

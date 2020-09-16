@@ -32,9 +32,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 					const {region} = params
 					if (region !== 'all') {
 						this.getCountriesByRegion(region)
-						return
+					} else {
+						this.getCountries()
 					}
-					this.getCountries()
 				} else if (params.name) {
 					this.getCountriesByName(params.name)
 				}
