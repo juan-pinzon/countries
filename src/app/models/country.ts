@@ -1,5 +1,7 @@
 export interface Country {
-  name: string
+  name: {
+		common: string
+	}
   alpha2Code: string
   capital: string
   region: string
@@ -8,5 +10,7 @@ export interface Country {
   latlng: string[]
   borders: string[]
   languages: {nativeName: string}[],
-  flag: string[]
+  flags: {
+		svg: string
+	}
 }
